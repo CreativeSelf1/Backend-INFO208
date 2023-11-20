@@ -1,10 +1,16 @@
 import mysql from "mysql2/promise";
+import "dotenv/config";
+
+const dbHost = process.env.DB_HOST;
+const dbUser = process.env.DB_USER;
+const dbPassword = process.env.DB_PASSWORD;
+const dbDatabase = process.env.DB_DATABASE;
 
 const pool = mysql.createPool({
-  host: "localhost",
-  user: "fernando",
-  password: "fernando0607",
-  database: "medios_prensa",
+  host: dbHost,
+  user: dbUser,
+  password: dbPassword,
+  database: dbDatabase,
   connectionLimit: 10,
 });
 
