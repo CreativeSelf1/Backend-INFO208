@@ -2,6 +2,6 @@
 
 ## Dependencias necesarias
 
-npm install express typescript ts-node nodemon @types/node @types/express --save-dev
+npm install express typescript ts-node nodemon @types/node @types/express --save-dev dotenv --save
 
 npm install dotenv --save
