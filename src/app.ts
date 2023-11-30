@@ -6,7 +6,7 @@ const app = express();
 
 // Habilitar CORS para todas las rutas
 app.use(cors());
-
+app.use(express.json());
 // Resto de la configuración de tu aplicación...
 
 const port = 3000;

@@ -8,6 +8,7 @@ const dbDatabase = process.env.DB_DATABASE;
 
 const pool = mysql.createPool({
   host: dbHost,
+  port:3307,
   user: dbUser,
   password: dbPassword,
   database: dbDatabase,
