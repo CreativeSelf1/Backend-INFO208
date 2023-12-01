@@ -10,11 +10,11 @@ const dbDatabase = process.env.DB_DATABASE;
 
 
 const pool = mysql.createPool({
-  host: dbHost,
+  host: 192.168.0.9,
   port: 3307,
-  user: dbUser,
-  password: dbPassword,
-  database: dbDatabase,
+  user: root,
+  password: fernando0607,
+  database: info,
   connectionLimit: 10,
 });
 
