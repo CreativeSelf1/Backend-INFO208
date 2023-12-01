@@ -5,13 +5,13 @@ const dbHost = process.env.DB_HOST;
 const dbUser = process.env.DB_USER;
 const dbPassword = process.env.DB_PASSWORD;
 const dbDatabase = process.env.DB_DATABASE;
-const database_port = process.env.DB_BASE_PORT ? parseInt(process.env.DB_BASE_PORT, 10) : 3306;
+
 
 
 
 const pool = mysql.createPool({
   host: dbHost,
-  port: database_port,
+  port: 3307,
   user: dbUser,
   password: dbPassword,
   database: dbDatabase,
