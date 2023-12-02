@@ -55,9 +55,9 @@ export const addComment = async (req: Request, res: Response) => {
 export const comentario = async (req: Request, res: Response) => {
   const { command } = req.params;
   try {
-    const results = await pool.query("SELECT e.comentario  FROM Servicios s JOIN Evaluacion e ON s.servicio_id = e.servicio_id WHERE s.servicio_id = ?",[command]);
+    const results = await pool.query('select e."comentario"  from servicios s join evaluacion e on s."servicio_ID" = e."servicio_ID" where s."servicio_ID" = $1',[command]);
 
-    res.json(results);
+    res.json(results.rows);
   } catch (error) {
     console.error("Error en la consulta a la base de datos:", error);
     res.status(500).send("Error interno del servidor");
