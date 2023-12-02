@@ -4,8 +4,8 @@ import { pool } from "./db";
 export const getServiceType = async (req: Request, res: Response) => {
   const { command } = req.params;
   try {
-    const results = await pool.query("SELECT * FROM servicios s WHERE servicio_ID = ?", [command]);
-    res.json(results);
+    const results = await pool.query('SELECT * FROM servicios s WHERE "servicio_ID" = $1', [command]);
+    res.json(results.rows);
   } catch (error) {
     console.error("Error en la consulta a la base de datos:", error);
     res.status(500).send("Error interno del servidor");
