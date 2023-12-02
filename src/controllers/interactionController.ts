@@ -5,7 +5,7 @@ export const getServiceType = async (req: Request, res: Response) => {
   const { command } = req.params;
   try {
     const results = await pool.query("SELECT * FROM servicios s WHERE servicio_ID = ?", [command]);
-    res.json(results[0]);
+    res.json(results);
   } catch (error) {
     console.error("Error en la consulta a la base de datos:", error);
     res.status(500).send("Error interno del servidor");
@@ -15,7 +15,8 @@ export const getServiceType = async (req: Request, res: Response) => {
 export const getAllServices = async (req: Request, res: Response) => {
   try {
     const results = await pool.query("SELECT * FROM servicios");
-    res.json(results[0]);
+    
+    res.json(results.rows);
   } catch (error) {
     console.error("Error en la consulta a la base de datos:", error);
     res.status(500).send("Error interno del servidor");
@@ -25,14 +26,15 @@ export const getAllServices = async (req: Request, res: Response) => {
 export const getService = async (req: Request, res: Response) => {
   const { command } = req.params;
   try {
-    const results = await pool.query("SELECT * FROM servicios s JOIN tipo_servicio ts ON ts.tipo_ID = s.tipo_ID WHERE nombre_tipo = ?", [command]);
+    const results = await pool.query('SELECT * FROM servicios s JOIN tipo_servicio ts ON s."tipo_ID" = ts."tipo_ID" WHERE nombre_tipo = $1', [command]);
 
-    res.json(results[0]);
+    res.json(results.rows);
   } catch (error) {
     console.error("Error en la consulta a la base de datos:", error);
     res.status(500).send("Error interno del servidor");
   }
-};
+}
+;
 
 export const addComment = async (req: Request, res: Response) => {
   try {
@@ -55,7 +57,7 @@ export const comentario = async (req: Request, res: Response) => {
   try {
     const results = await pool.query("SELECT e.comentario  FROM Servicios s JOIN Evaluacion e ON s.servicio_id = e.servicio_id WHERE s.servicio_id = ?",[command]);
 
-    res.json(results[0]);
+    res.json(results);
   } catch (error) {
     console.error("Error en la consulta a la base de datos:", error);
     res.status(500).send("Error interno del servidor");

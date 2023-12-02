@@ -16,5 +16,5 @@ app.use(express.json());
 app.use("/api/command",interactionRouter);
 
 app.listen(port, () => {
-  console.log(`Servidor escuchando en http://192.168.43.9:${port}`);
+  console.log(`Servidor escuchando en puerto ${port}`);
 });
