@@ -6,6 +6,4 @@ npm install express typescript ts-node nodemon @types/node @types/express --save
 
 npm i pg
 
-npm install dotenv --save
-
 npm i --save-dev @types/pg
