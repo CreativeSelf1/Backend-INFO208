@@ -25,3 +25,8 @@ npm install express typescript ts-node nodemon @types/node @types/express --save
 npm i pg
 
 npm i --save-dev @types/pg
+
+## Instrucciones para ejecutar en local
+
+1. Crear un archivo .env con las variables URL y DB_PORT
+2. npm run dev
