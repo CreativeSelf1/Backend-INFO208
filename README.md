@@ -8,7 +8,8 @@ Backend desplegado en https://render.com/
 1. GET `https://info208-backend-observatorio-calidad.onrender.com/api/command/services`: recibe todos los servicios almacenados en la base de datos
 2. GET `https://info208-backend-observatorio-calidad.onrender.com/api/command/servicio/<tipoServicio>`: recibe los servicios con informacion dependiendo del tipo de servicio (Restaurant, Hoteleria, Salud, ...)
 3. GET `https://info208-backend-observatorio-calidad.onrender.com/api/command/comentarios/<IDservicio>`: recibe los comentarios sobre la evaluación de un servicio según la ID (101,102,103,104,....) 
-4. POST `https://info208-backend-observatorio-calidad.onrender.com/api/command/comentario`: Agrega a la base de datos un comentario con la evaluación de un servicio
+4. GET `https://info208-backend-observatorio-calidad.onrender.com/api/command/parametros/<IDservicio>`: recibe los parámetros de evaluación de un servicio
+5. POST `https://info208-backend-observatorio-calidad.onrender.com/api/command/comentario`: Agrega a la base de datos un comentario con la evaluación de un servicio
 
 ```
 {
