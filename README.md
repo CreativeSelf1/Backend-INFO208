@@ -1,5 +1,5 @@
 # Backend-INFO208
-Backend hosteado en https://render.com/
+Backend desplegado en https://render.com/
 
 `https://info208-backend-observatorio-calidad.onrender.com/`
 
@@ -20,11 +20,7 @@ Backend hosteado en https://render.com/
 
 ## Dependencias necesarias
 
-npm install express typescript ts-node nodemon @types/node @types/express --save-dev dotenv --save
-
-npm i pg
-
-npm i --save-dev @types/pg
+npm install 
 
 ## Instrucciones para ejecutar en local
 
