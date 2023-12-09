@@ -5,7 +5,8 @@ import {
     getAllServices,
     getService,
     addComment,
-    comentario
+    comentario,
+    paramServices
 } 
 from "../controllers/interactionController";
 const router = express.Router();
@@ -15,4 +16,5 @@ router.get("/services",getAllServices);
 router.get("/servicio/:command",getService);
 router.post("/comentario",addComment)
 router.get("/comentarios/:command",comentario)
+router.get("/parametros/:command",paramServices)
 export { router as interactionRouter };

@@ -33,8 +33,19 @@ export const getService = async (req: Request, res: Response) => {
     console.error("Error en la consulta a la base de datos:", error);
     res.status(500).send("Error interno del servidor");
   }
-}
-;
+};
+
+export const paramServices = async (req: Request, res: Response) => {
+  const { command } = req.params;
+  try {
+    const results = await pool.query('select tp.nombre_parametro  from  servicios s join tipo_servicio ts on s."tipo_ID" = ts."tipo_ID" join tipo_parametro tp on ts."tipo_ID" = tp."tipo_ID" where  s."servicio_ID" = $1', [command]);
+
+    res.json(results.rows);
+  } catch (error) {
+    console.error("Error en la consulta a la base de datos:", error);
+    res.status(500).send("Error interno del servidor");
+  }
+};
 
 export const addComment = async (req: Request, res: Response) => {
   try {
