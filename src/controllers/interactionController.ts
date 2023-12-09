@@ -46,6 +46,7 @@ export const addComment = async (req: Request, res: Response) => {
 
     // Realiza la inserción en la base de datos
     await pool.query('INSERT INTO evaluacion ("servicio_ID", "comentario") VALUES ($1, $2)', [servicio_id, comentario]);
+    res.status(200).json({ message: 'Comentario agregado correctamente' });
   } catch (error) {
     console.error("Error al agregar comentario a la base de datos:", error);
     res.status(500).send("Error interno del servidor");
