@@ -30,5 +30,8 @@ npm install
 
 ## Instrucciones para ejecutar en local
 
-1. Crear un archivo .env con las variables URL y DB_PORT
+1. Crear un archivo .env con las variables DB_PORT para el puerto y URL para conectarse a la base de datos alojada en render
+
+URL: `postgres://root:6TtIUzHgkageqZVEy5rAb3GnqBHR4dg1@dpg-clkakrug1b2c739jigpg-a.oregon-postgres.render.com/info208_b8ae`
+
 2. npm run dev
