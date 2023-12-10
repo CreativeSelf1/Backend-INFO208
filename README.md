@@ -3,6 +3,10 @@ Backend desplegado en https://render.com/
 
 `https://info208-backend-observatorio-calidad.onrender.com/`
 
+[!NOTE]
+Instancias gratuitas de la aplicación en Render se apagarán o entrarán en un estado de suspensión cuando no estén en uso durante un período de inactividad, la próxima vez que se acceda a la aplicación, puede haber un breve período de tiempo antes de que la instancia se vuelva a encender y la aplicación esté disponible.
+
+
 ## Endpoints
 
 1. GET `https://info208-backend-observatorio-calidad.onrender.com/api/command/services`: recibe todos los servicios almacenados en la base de datos
