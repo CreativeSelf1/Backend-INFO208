@@ -1,11 +1,8 @@
 # BACKEND-INFO208
-Backend desplegado en https://render.com/
+
 
 `https://test-deploy-production-4480.up.railway.app/`
 
-
->[!NOTE]
-Instancias gratuitas de la aplicación en Render se apagarán o entrarán en un estado de suspensión cuando no estén en uso durante un período de inactividad, la próxima vez que se acceda a la aplicación, puede haber un breve período de tiempo antes de que la instancia se vuelva a encender y la aplicación esté disponible.
 
 
 ## Endpoints
